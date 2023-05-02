@@ -9,22 +9,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-     Button btn_suiv;
-     RadioGroup rg;
-     RadioButton rb;
-     int score=0;
+import java.sql.SQLOutput;
 
+public class Question5 extends AppCompatActivity implements View.OnClickListener{
+    Button btn_suiv;
+    RadioGroup rg;
+    RadioButton rb;
+    int score;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_question5);
         btn_suiv = (Button) findViewById(R.id.btn_suiv);
-        rg = (RadioGroup) findViewById(R.id.radio);
+        rg = (RadioGroup) findViewById(R.id.radioo);
         btn_suiv.setOnClickListener(this);
         btn_suiv.setBackgroundColor(Color.GRAY);
-
     }
 
     @Override
@@ -33,13 +34,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_suiv:
                 int id = rg.getCheckedRadioButtonId();
                 rb = (RadioButton) findViewById(id);
-                if (rb.getText().toString().equals("7"))
+                if (rb.getText().toString().equals("Une voiture"))
                 {
-                    score = 1;
+                    score = getIntent().getExtras().getInt("score");
+                    score = score+1;
                 }
-                Intent i = new Intent(this,Question2.class);
-                i.putExtra("score",score);
-                startActivity(i);
+                else
+                {
+                    score = getIntent().getExtras().getInt("score");
+                }
+                System.out.println(score);
+                System.out.println(String.valueOf(score));
+
+                Toast.makeText(getBaseContext(), new String().valueOf(score),Toast.LENGTH_LONG).show();
+
         }
     }
 }

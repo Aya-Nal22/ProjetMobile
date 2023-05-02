@@ -10,21 +10,19 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-     Button btn_suiv;
-     RadioGroup rg;
-     RadioButton rb;
-     int score=0;
-
+public class Question4 extends AppCompatActivity implements View.OnClickListener{
+    Button btn_suiv;
+    RadioGroup rg;
+    RadioButton rb;
+    int score;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_question4);
         btn_suiv = (Button) findViewById(R.id.btn_suiv);
-        rg = (RadioGroup) findViewById(R.id.radio);
+        rg = (RadioGroup) findViewById(R.id.radior);
         btn_suiv.setOnClickListener(this);
         btn_suiv.setBackgroundColor(Color.GRAY);
-
     }
 
     @Override
@@ -33,13 +31,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_suiv:
                 int id = rg.getCheckedRadioButtonId();
                 rb = (RadioButton) findViewById(id);
-                if (rb.getText().toString().equals("7"))
+                if (rb.getText().toString().equals("H2O"))
                 {
-                    score = 1;
+                    score = getIntent().getExtras().getInt("score");
+                    score = score+1;
                 }
-                Intent i = new Intent(this,Question2.class);
+                else
+                {
+                    score = getIntent().getExtras().getInt("score");
+                }
+                Intent i = new Intent(this,Question5.class);
                 i.putExtra("score",score);
                 startActivity(i);
+
         }
+
     }
 }

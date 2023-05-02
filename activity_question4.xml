@@ -22,7 +22,7 @@
             android:elegantTextHeight="true"
             android:textStyle="bold"
             android:inputType="textPersonName"
-            android:text="Question 1" />
+            android:text="Question 4" />
 
         <TextView
             android:id="@+id/editTextTextPersonName"
@@ -36,10 +36,10 @@
             android:textColor="@color/black"
             android:layout_marginTop="35dp"
             android:inputType="textPersonName"
-            android:text="1+2*3="/>
+            android:text="Le symbole chimique de l'eau"/>
 
         <RadioGroup
-            android:id="@+id/radio"
+            android:id="@+id/radior"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:text="9"/>
+                android:text="H2O" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:text="7" />
+                android:text="C2O" />
 
             <RadioButton
                 android:id="@+id/radioButton4"
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:text="5" />
+                android:text="hcl" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
@@ -75,15 +75,15 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:text="6" />
+                android:text="O2" />
         </RadioGroup>
 
-            <Button
-                android:id="@+id/btn_suiv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="90dp"
-                android:layout_gravity="center"
-                android:text="Suivant"/>
+        <Button
+            android:id="@+id/btn_suiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="90dp"
+            android:layout_gravity="center"
+            android:text="Suivant"/>
     </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>
