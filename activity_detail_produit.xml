@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailProduit">
+
+    <EditText
+        android:id="@+id/nom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nom du produit"
+        android:textAlignment="center"
+        android:padding="20dp"/>
+
+    <EditText
+        android:id="@+id/prix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:inputType="textPersonName"
+        android:hint="Prix" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/mod"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Modifier"
+            android:padding="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dip"
+            android:backgroundTint="#F47C7C"
+            android:textColor="#FFF2F2"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/sup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="#F47C7C"
+            android:textColor="#FFF2F2"
+            android:text="Supprimer"
+            android:padding="12dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>
